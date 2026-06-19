@@ -1,0 +1,83 @@
+# =============================================================================
+# Probot Settings App configuration
+# https://github.com/apps/settings
+#
+# This file is synced automatically to GitHub repo settings whenever it
+# changes on the default branch. Edit here, not in the GitHub UI, so
+# settings persist correctly when this repo is used as a template.
+# =============================================================================
+
+repository:
+  name: base-web-app
+  description: 'Production-ready Next.js 16 + Sanity + Vercel base template with services layer, database, and full CI/CD'
+  homepage: ''
+  topics: nextjs, sanity, vercel, typescript, template, drizzle, neon
+
+  # Features
+  has_issues: true
+  has_projects: false
+  has_wiki: true
+  has_downloads: false
+
+  # Merge behavior
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: false
+  delete_branch_on_merge: true
+  allow_auto_merge: true
+
+  # Default branch
+  default_branch: main
+
+  # Visibility — leave as-is, set manually per repo (template vs project)
+  # private: true
+
+labels:
+  - name: bug
+    color: 'd73a4a'
+    description: "Something isn't working"
+  - name: enhancement
+    color: 'a2eeef'
+    description: 'New feature or request'
+  - name: documentation
+    color: '0075ca'
+    description: 'Improvements or additions to documentation'
+  - name: good first issue
+    color: '7057ff'
+    description: 'Good for newcomers'
+  - name: chore
+    color: 'fef2c0'
+    description: 'Tooling, dependencies, or config changes'
+  - name: ci
+    color: '1d76db'
+    description: 'CI/CD pipeline changes'
+  - name: performance
+    color: 'ff9800'
+    description: 'Performance issue or improvement'
+  - name: cms
+    color: 'f03e2f'
+    description: 'Sanity CMS / content related'
+  - name: security
+    color: 'b60205'
+    description: 'Security related issue'
+  - name: wontfix
+    color: 'ffffff'
+    description: 'This will not be worked on'
+  - name: needs-triage
+    color: 'e4e669'
+    description: 'Needs initial review and prioritization'
+  - name: dependencies
+    color: '0366d6'
+    description: 'Pull requests that update a dependency file'
+  - name: question
+    color: 'd876e3'
+    description: 'Further information is requested'
+  - name: duplicate
+    color: 'cfd3d7'
+    description: 'This issue or pull request already exists'
+  - name: invalid
+    color: 'e4e669'
+    description: 'This doesn\'t seem right'
+  - name: breaking-change
+    color: 'b60205'
+    description: 'Introduces a breaking change'
