@@ -20,7 +20,7 @@ This pulls public variables (Sanity project IDs, dataset names, URLs) into `.env
 ### 2. Add sensitive variables manually
 
 Sensitive tokens are intentionally excluded from `vercel env pull`. Copy each value from
-the Vercel dashboard (`vercel.com → awtb → Settings → Environment Variables`) and add
+the Vercel dashboard (`vercel.com → {{PROJECT_NAME}} → Settings → Environment Variables`) and add
 them to `.env.local` manually.
 
 See [`.env.example`](../.env.example) for the complete list with instructions for

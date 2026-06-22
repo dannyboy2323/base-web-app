@@ -3,7 +3,7 @@ name: Bug Report
 about: Something is broken or behaving unexpectedly
 title: 'bug: '
 labels: bug, needs-triage
-assignees: dannyboy2323
+assignees: {{GITHUB_USERNAME}}
 
 ---
 
@@ -43,7 +43,7 @@ body:
       label: Steps to reproduce
       description: Numbered steps that reliably reproduce the bug.
       placeholder: |
-        1. Go to https://awtb.vercel.app
+        1. Go to {{PRODUCTION_URL}}
         2. Click the featured postcard
         3. Observe 404 error
     validations:
@@ -54,7 +54,7 @@ body:
     attributes:
       label: Environment
       options:
-        - Production (awtb.vercel.app)
+        - Production ({{PRODUCTION_URL_HOST}})
         - Preview deployment
         - Local development (localhost:3000)
     validations:

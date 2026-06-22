@@ -3,7 +3,7 @@ name: Content / CMS Issue
 about: Problem with Sanity Studio, schema fields, or the editor workflow
 title: 'cms: '
 labels: cms, needs-triage
-assignees: dannyboy2323
+assignees: {{GITHUB_USERNAME}}
 
 ---
 

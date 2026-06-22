@@ -3,7 +3,7 @@ name: Feature Request
 about: Propose new functionality or an improvement to existing behavior
 title: 'feat: '
 labels: enhancement, needs-triage
-assignees: dannyboy2323
+assignees: {{GITHUB_USERNAME}}
 
 ---
 

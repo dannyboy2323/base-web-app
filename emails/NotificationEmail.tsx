@@ -30,7 +30,7 @@ export function NotificationEmail({ title, message, recipientName }: Notificatio
           <Text style={{ color: '#555', lineHeight: '1.6' }}>{message}</Text>
           <Hr style={{ margin: '32px 0', borderColor: '#eee' }} />
           <Text style={{ color: '#999', fontSize: '12px' }}>
-            This is an automated notification from AWTB.
+            This is an automated notification from {{PROJECT_DISPLAY_NAME}}.
           </Text>
         </Container>
       </Body>

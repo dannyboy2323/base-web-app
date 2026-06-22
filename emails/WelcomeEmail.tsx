@@ -10,7 +10,7 @@ interface WelcomeEmailProps {
   loginUrl?: string
 }
 
-export function WelcomeEmail({ name, loginUrl = 'https://awtb.vercel.app' }: WelcomeEmailProps) {
+export function WelcomeEmail({ name, loginUrl = '{{PRODUCTION_URL}}' }: WelcomeEmailProps) {
   return (
     <Html lang="en">
       <Head />
@@ -24,7 +24,7 @@ export function WelcomeEmail({ name, loginUrl = 'https://awtb.vercel.app' }: Wel
             borderRadius: '8px',
           }}
         >
-          <Heading style={{ color: '#0A0E11', fontSize: '24px' }}>Welcome to AWTB, {name}!</Heading>
+          <Heading style={{ color: '#0A0E11', fontSize: '24px' }}>Welcome to {{PROJECT_DISPLAY_NAME}}, {name}!</Heading>
           <Text style={{ color: '#555', lineHeight: '1.6' }}>
             Thanks for joining. You can now access your account and start exploring stories.
           </Text>
@@ -43,7 +43,7 @@ export function WelcomeEmail({ name, loginUrl = 'https://awtb.vercel.app' }: Wel
           </Button>
           <Hr style={{ margin: '32px 0', borderColor: '#eee' }} />
           <Text style={{ color: '#999', fontSize: '12px' }}>
-            You received this email because you signed up for AWTB.
+            You received this email because you signed up for {{PROJECT_DISPLAY_NAME}}.
           </Text>
         </Container>
       </Body>

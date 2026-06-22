@@ -8,7 +8,7 @@ Deployment is fully automated via Vercel. There are three environments:
 | ----------- | ------------- | ------------------------- | --------------------- |
 | Development | local         | localhost:3000            | Local development     |
 | Preview     | any PR branch | auto-generated Vercel URL | Review before merging |
-| Production  | `main`        | awtb.vercel.app           | Live site             |
+| Production  | `main`        | {{PRODUCTION_URL_HOST}}           | Live site             |
 
 ---
 
@@ -18,7 +18,7 @@ Deployment is fully automated via Vercel. There are three environments:
 
 Every merge to `main` triggers an automatic production deployment. No manual steps needed.
 
-You can monitor deployments at: vercel.com/dkb23/awtb → Deployments tab.
+You can monitor deployments at: vercel.com/{{VERCEL_TEAM}}/{{PROJECT_NAME}} → Deployments tab.
 
 ### Preview
 
@@ -60,7 +60,7 @@ No redeploy is needed for content changes.
 ## Environment Variables
 
 All environment variables are managed in the Vercel dashboard:
-vercel.com → awtb project → Settings → Environment Variables
+vercel.com → {{PROJECT_NAME}} project → Settings → Environment Variables
 
 When adding a new variable:
 
@@ -127,7 +127,7 @@ point-in-time backup.
 ### Error monitoring (Sentry)
 
 Runtime errors in production are captured automatically by Sentry.
-Dashboard: [awtb-monitoring.sentry.io](https://awtb-monitoring.sentry.io)
+Dashboard: [{{SENTRY_ORG}}.sentry.io](https://{{SENTRY_ORG}}.sentry.io)
 
 ### Uptime monitoring (Checkly)
 
@@ -137,8 +137,8 @@ Dashboard: [app.checklyhq.com](https://app.checklyhq.com)
 ### Analytics (PostHog + Vercel)
 
 - Product analytics: [app.posthog.com](https://app.posthog.com)
-- Web analytics: vercel.com → awtb project → Analytics tab
-- Speed Insights: vercel.com → awtb project → Speed Insights tab
+- Web analytics: vercel.com → {{PROJECT_NAME}} project → Analytics tab
+- Speed Insights: vercel.com → {{PROJECT_NAME}} project → Speed Insights tab
 
 ---
 
@@ -160,7 +160,7 @@ sanity.io/manage → d205mlci → API → Webhooks → "Vercel ISR Revalidation"
 
 Settings:
 
-- URL: `https://awtb.vercel.app/api/revalidate`
+- URL: `{{PRODUCTION_URL}}/api/revalidate`
 - Trigger on: Create, Update, Delete
 - Filter: `_type in ["story", "siteSettings"]`
 - Projection: `{_type}`

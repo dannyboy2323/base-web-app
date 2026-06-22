@@ -4,7 +4,7 @@
 
 The Sanity Studio is embedded directly in the app — no separate login portal.
 
-- **Production:** https://awtb.vercel.app/studio
+- **Production:** {{PRODUCTION_URL}}/studio
 - **Local:** http://localhost:3000/studio
 
 Log in with your Sanity account credentials.

@@ -4,7 +4,7 @@ import { test, expect } from '@playwright/test'
  * Checkly production browser check — Landing page.
  *
  * Runs every 5 minutes from multiple global locations against
- * https://awtb.vercel.app. Alerts on failure.
+ * {{PRODUCTION_URL}}. Alerts on failure.
  *
  * baseURL is set in checkly.config.ts via playwrightConfig.use.baseURL
  */

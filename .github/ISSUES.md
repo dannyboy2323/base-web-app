@@ -62,7 +62,7 @@ body:
       label: Steps to reproduce
       description: Numbered steps that reliably reproduce the bug.
       placeholder: |
-        1. Go to https://awtb.vercel.app
+        1. Go to {{PRODUCTION_URL}}
         2. Click the featured postcard
         3. Observe 404 error
     validations:
@@ -73,7 +73,7 @@ body:
     attributes:
       label: Environment
       options:
-        - Production (awtb.vercel.app)
+        - Production ({{PRODUCTION_URL_HOST}})
         - Preview deployment
         - Local development (localhost:3000)
     validations:
@@ -312,7 +312,7 @@ body:
     id: url
     attributes:
       label: URL affected
-      placeholder: 'https://awtb.vercel.app/'
+      placeholder: '{{PRODUCTION_URL}}/'
     validations:
       required: true
 
@@ -472,7 +472,7 @@ and direct general questions to Discussions:
 blank_issues_enabled: false
 contact_links:
   - name: General Questions
-    url: https://github.com/dannyboy2323/awtb/discussions
+    url: https://github.com/{{GITHUB_USERNAME}}/{{GITHUB_REPO}}/discussions
     about: For questions that are not bugs or feature requests, use Discussions.
 ```
 
@@ -480,7 +480,7 @@ contact_links:
 
 ## Issue Labels Reference
 
-Set these up at github.com/dannyboy2323/awtb/labels:
+Set these up at github.com/{{GITHUB_USERNAME}}/{{GITHUB_REPO}}/labels:
 
 | Label              | Colour    | Description                         |
 | ------------------ | --------- | ----------------------------------- |

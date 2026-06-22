@@ -10,9 +10,9 @@ import { defineConfig } from 'checkly'
  * Test locally: npx checkly test
  */
 const config = defineConfig({
-  projectName: 'awtb',
-  logicalId: 'awtb',
-  repoUrl: 'https://github.com/dannyboy2323/awtb',
+  projectName: '{{PROJECT_NAME}}',
+  logicalId: '{{PROJECT_NAME}}',
+  repoUrl: 'https://github.com/{{GITHUB_USERNAME}}/{{GITHUB_REPO}}',
   checks: {
     frequency: 10,
     locations: ['us-east-1', 'eu-central-1', 'ap-southeast-1'],
@@ -21,7 +21,7 @@ const config = defineConfig({
     checkMatch: '**/__checks__/**/*.check.ts',
     playwrightConfig: {
       use: {
-        baseURL: 'https://awtb.vercel.app',
+        baseURL: '{{PRODUCTION_URL}}',
       },
     },
     browserChecks: {

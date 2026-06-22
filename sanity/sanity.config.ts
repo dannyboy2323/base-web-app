@@ -49,7 +49,7 @@ function resolveHref(documentType?: string, slug?: string): string | undefined {
 // Main Sanity configuration
 export default defineConfig({
   name: 'default',
-  title: 'Adventures With The Bull',
+  title: '{{PROJECT_DISPLAY_NAME}}',
   basePath: '/studio',
 
   projectId,

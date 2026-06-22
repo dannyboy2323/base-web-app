@@ -10,8 +10,8 @@
 ## Setup
 
 ```bash
-git clone git@github.com:dannyboy2323/awtb.git
-cd awtb
+git clone git@github.com:{{GITHUB_USERNAME}}/{{GITHUB_REPO}}.git
+cd {{PROJECT_NAME}}
 npm install
 vercel link
 vercel env pull .env.local

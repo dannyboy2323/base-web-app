@@ -17,7 +17,7 @@ The docs reflect the actual current state of the codebase.
 
 ---
 
-# Claude-Specific Rules for awtb
+# Claude-Specific Rules for {{PROJECT_NAME}}
 
 ---
 

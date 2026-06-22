@@ -3,7 +3,7 @@ name: Performance Issue
 about: Slow load times, large assets, or Core Web Vitals regressions
 title: 'perf: '
 labels: needs-triage, performance
-assignees: dannyboy2323
+assignees: {{GITHUB_USERNAME}}
 
 ---
 
@@ -32,7 +32,7 @@ body:
     id: url
     attributes:
       label: URL affected
-      placeholder: 'https://awtb.vercel.app/'
+      placeholder: '{{PRODUCTION_URL}}/'
     validations:
       required: true
 

@@ -23,7 +23,7 @@ body:
     id: url
     attributes:
       label: URL affected
-      placeholder: 'https://awtb.vercel.app/'
+      placeholder: '{{PRODUCTION_URL}}/'
     validations:
       required: true
 

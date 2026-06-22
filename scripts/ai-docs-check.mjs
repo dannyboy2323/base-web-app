@@ -110,7 +110,7 @@ async function reviewDoc(diff, changedFiles, doc, currentContent) {
       model: "claude-sonnet-4-6",
       max_tokens: 4000,
       system:
-        "You are a technical documentation maintainer for a Next.js + Sanity + Vercel project called AWTB.\n" +
+        "You are a technical documentation maintainer for a Next.js + Sanity + Vercel project called {{PROJECT_DISPLAY_NAME}}.\n" +
         "Your job is to keep documentation accurate and up to date based on code changes.\n\n" +
         "Rules:\n" +
         "- Only update content that is factually incorrect or missing based on the diff\n" +

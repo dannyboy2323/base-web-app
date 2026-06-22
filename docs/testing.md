@@ -87,7 +87,7 @@ test("my new flow", async ({ page }) => {
 
 ## Production Monitoring (Checkly)
 
-Checkly runs browser checks against `https://awtb.vercel.app` every 10 minutes from
+Checkly runs browser checks against `{{PRODUCTION_URL}}` every 10 minutes from
 `us-east-1` and `eu-central-1`. Failed checks trigger alerts.
 
 ```bash
@@ -109,7 +109,7 @@ npx checkly deploy
 ### Adding new checks
 
 Add `.spec.ts` files to `__checks__/`. They use the same Playwright syntax as E2E tests
-but run against production (`baseURL: 'https://awtb.vercel.app'` set in `checkly.config.ts`).
+but run against production (`baseURL: '{{PRODUCTION_URL}}'` set in `checkly.config.ts`).
 Run `npx checkly deploy` after adding or updating checks.
 
 ---

@@ -40,8 +40,8 @@ PRs and issues that are rude, dismissive, or hostile will be closed.
 
 ```bash
 # Clone the repo
-git clone git@github.com:dannyboy2323/awtb.git
-cd awtb
+git clone git@github.com:{{GITHUB_USERNAME}}/{{GITHUB_REPO}}.git
+cd {{PROJECT_NAME}}
 
 # Install dependencies
 npm install
@@ -281,6 +281,6 @@ See `.env.example` for the full list of required variables and where to obtain e
 ## Questions
 
 For questions that don't fit a bug report or feature request, use
-[GitHub Discussions](https://github.com/dannyboy2323/awtb/discussions).
+[GitHub Discussions](https://github.com/{{GITHUB_USERNAME}}/{{GITHUB_REPO}}/discussions).
 
 For urgent issues affecting production, open a bug report and label it `bug` + `blocked`.

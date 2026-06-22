@@ -1,5 +1,5 @@
 {
-  "name": "awtb",
+  "name": "{{PROJECT_NAME}}",
   "private": true,
   "workspaces": [
     "app",

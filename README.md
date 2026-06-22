@@ -3,23 +3,23 @@
 > A graphic-novel storytelling platform. Readers enter each story through a postcard;
 > inside, graphic-novel panels and prose are presented side by side, page by page.
 
-[![CI](https://github.com/dannyboy2323/awtb/actions/workflows/ci.yml/badge.svg)](https://github.com/dannyboy2323/awtb/actions/workflows/ci.yml)
-[![Docs](https://github.com/dannyboy2323/awtb/actions/workflows/docs.yml/badge.svg)](https://github.com/dannyboy2323/awtb/actions/workflows/docs.yml)
+[![CI](https://github.com/{{GITHUB_USERNAME}}/{{GITHUB_REPO}}/actions/workflows/ci.yml/badge.svg)](https://github.com/{{GITHUB_USERNAME}}/{{GITHUB_REPO}}/actions/workflows/ci.yml)
+[![Docs](https://github.com/{{GITHUB_USERNAME}}/{{GITHUB_REPO}}/actions/workflows/docs.yml/badge.svg)](https://github.com/{{GITHUB_USERNAME}}/{{GITHUB_REPO}}/actions/workflows/docs.yml)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Sanity](https://img.shields.io/badge/CMS-Sanity-F03E2F?logo=sanity&logoColor=white)](https://www.sanity.io/)
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel&logoColor=white)](https://awtb.vercel.app)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel&logoColor=white)]({{PRODUCTION_URL}})
 [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](.github/CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Live site:** [awtb.vercel.app](https://awtb.vercel.app) · **Studio:** [awtb.vercel.app/studio](https://awtb.vercel.app/studio)
+**Live site:** [{{PRODUCTION_URL_HOST}}]({{PRODUCTION_URL}}) · **Studio:** [{{PRODUCTION_URL_HOST}}/studio]({{PRODUCTION_URL}}/studio)
 
 ---
 
 ## About
 
-AWTB is a Next.js 16 application backed by an embedded Sanity Studio. Editors manage
+{{PROJECT_DISPLAY_NAME}} is a Next.js 16 application backed by an embedded Sanity Studio. Editors manage
 postcards, cover images, graphic-novel panels, and prose entirely through the Studio at
 `/studio`. Publishing triggers a webhook that revalidates the production cache within
 seconds — no redeploy required.
@@ -68,8 +68,8 @@ seconds — no redeploy required.
 ### Quick Start
 
 ```bash
-git clone git@github.com:dannyboy2323/awtb.git
-cd awtb
+git clone git@github.com:{{GITHUB_USERNAME}}/{{GITHUB_REPO}}.git
+cd {{PROJECT_NAME}}
 npm install
 vercel link
 vercel env pull .env.local
@@ -109,7 +109,7 @@ npm run dev
 ## Project Structure
 
 ```
-awtb/
+{{PROJECT_NAME}}/
 ├── .github/              # CI workflows, issue templates, PR template, CONTRIBUTING
 ├── __checks__/           # Checkly production monitoring checks
 ├── app/                  # Next.js App Router pages and API routes
@@ -161,7 +161,7 @@ The pre-push hook runs typecheck, lint, and tests automatically.
 
 ## Deployment
 
-- Push to `main` → auto-deploys to [awtb.vercel.app](https://awtb.vercel.app)
+- Push to `main` → auto-deploys to [{{PRODUCTION_URL_HOST}}]({{PRODUCTION_URL}})
 - Open a PR → Vercel creates a preview deployment URL
 
 → **[Deployment guide](docs/deployment.md)**
@@ -170,7 +170,7 @@ The pre-push hook runs typecheck, lint, and tests automatically.
 
 ## Issue Tracking
 
-Use [GitHub Issues](https://github.com/dannyboy2323/awtb/issues). Six issue templates
+Use [GitHub Issues](https://github.com/{{GITHUB_USERNAME}}/{{GITHUB_REPO}}/issues). Six issue templates
 are available — select the appropriate one when filing. Reference issues in PRs with
 `Closes #12` to auto-close on merge.
 

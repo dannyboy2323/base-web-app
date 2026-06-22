@@ -3,7 +3,7 @@ name: Chore
 about: Dependency upgrades, tooling changes, CI improvements, or infrastructure work
 title: 'chore: '
 labels: ''
-assignees: dannyboy2323
+assignees: {{GITHUB_USERNAME}}
 
 ---
 

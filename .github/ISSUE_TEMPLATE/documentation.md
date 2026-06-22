@@ -3,7 +3,7 @@ name: Documentation
 about: Missing, incorrect, or outdated documentation
 title: 'docs: '
 labels: documentation
-assignees: dannyboy2323
+assignees: {{GITHUB_USERNAME}}
 
 ---
 

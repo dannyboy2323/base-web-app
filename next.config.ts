@@ -57,8 +57,8 @@ const nextConfig: NextConfig = {
 }
 
 export default withSentryConfig(withBundleAnalyzer(nextConfig), {
-  org: 'awtb-monitoring',
-  project: 'awtb-sentry',
+  org: '{{SENTRY_ORG}}',
+  project: '{{SENTRY_PROJECT}}',
   silent: !process.env.CI,
   widenClientFileUpload: true,
   webpack: {

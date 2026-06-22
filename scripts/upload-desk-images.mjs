@@ -19,7 +19,7 @@ if (!process.env.BLOB_READ_WRITE_TOKEN) {
   process.exit(1)
 }
 
-const SOURCE_DIR = '/Users/dannyboice/Developer/awtb-frontend/public/assets/landing'
+const SOURCE_DIR = '/Users/dannyboice/Developer/{{PROJECT_NAME}}/public/assets/landing'
 const OUTPUT_FILE = './public/desk-image-urls.json'
 
 async function upload() {

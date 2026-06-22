@@ -3,7 +3,7 @@
 ## Supported Versions
 
 Only the latest version deployed to production at
-[awtb.vercel.app](https://awtb.vercel.app) is actively maintained and receives
+[{{PRODUCTION_URL_HOST}}]({{PRODUCTION_URL}}) is actively maintained and receives
 security fixes.
 
 | Environment                       | Status                 |
@@ -23,7 +23,7 @@ these methods:
 
 ### Option A — GitHub Private Security Advisory (preferred)
 
-1. Go to `https://github.com/dannyboy2323/awtb/security/advisories`
+1. Go to `https://github.com/{{GITHUB_USERNAME}}/{{GITHUB_REPO}}/security/advisories`
 2. Click **New draft security advisory**
 3. Fill in the details and submit
 4. A maintainer will respond within 48 hours
@@ -31,7 +31,7 @@ these methods:
 ### Option B — Direct contact
 
 Email the maintainer directly at the address on the
-[GitHub profile](https://github.com/dannyboy2323). Use the subject line:
+[GitHub profile](https://github.com/{{GITHUB_USERNAME}}). Use the subject line:
 `[SECURITY] Postcard Stories — <brief description>`.
 
 ---
@@ -53,8 +53,8 @@ Please provide as much of the following as possible:
 
 ### In scope
 
-- The Next.js application at `awtb.vercel.app`
-- The embedded Sanity Studio at `awtb.vercel.app/studio`
+- The Next.js application at `{{PRODUCTION_URL_HOST}}`
+- The embedded Sanity Studio at `{{PRODUCTION_URL_HOST}}/studio`
 - API routes (`/api/revalidate`, `/api/draft-mode/*`)
 - Authentication and session handling
 - Exposed environment variables or secrets
