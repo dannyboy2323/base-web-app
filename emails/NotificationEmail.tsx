@@ -9,9 +9,15 @@ interface NotificationEmailProps {
   title: string
   message: string
   recipientName?: string
+  appName?: string
 }
 
-export function NotificationEmail({ title, message, recipientName }: NotificationEmailProps) {
+export function NotificationEmail({
+  title,
+  message,
+  recipientName,
+  appName = '{{PROJECT_DISPLAY_NAME}}',
+}: NotificationEmailProps) {
   return (
     <Html lang="en">
       <Head />
@@ -30,7 +36,7 @@ export function NotificationEmail({ title, message, recipientName }: Notificatio
           <Text style={{ color: '#555', lineHeight: '1.6' }}>{message}</Text>
           <Hr style={{ margin: '32px 0', borderColor: '#eee' }} />
           <Text style={{ color: '#999', fontSize: '12px' }}>
-            This is an automated notification from {{PROJECT_DISPLAY_NAME}}.
+            This is an automated notification from {appName}.
           </Text>
         </Container>
       </Body>
