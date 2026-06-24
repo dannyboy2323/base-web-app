@@ -21,8 +21,11 @@ jobs:
           node-version: '22'
           cache: 'npm'
 
+      - name: Pin npm version
+        run: npm install -g npm@11
+
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: TypeScript check
         run: npm run type-check
@@ -53,6 +56,5 @@ jobs:
         if: always()
         uses: vercel/repository-dispatch/actions/status@v1
         with:
-          name: test
-          token: ${{ secrets.GITHUB_TOKEN }}
-          conclusion: ${{ job.status }}
+          name: CI
+          github_token: ${{ secrets.GITHUB_TOKEN }}
