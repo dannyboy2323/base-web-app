@@ -1,28 +1,48 @@
 version: 2
+
 updates:
-  # npm dependencies
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
       interval: 'weekly'
       day: 'monday'
       time: '09:00'
-    open-pull-requests-limit: 5
+      timezone: 'America/New_York'
+    # Group all patch and minor updates into a single PR
+    # Major updates get individual PRs so they're visible
     groups:
-      # Group all non-breaking updates together
       minor-and-patch:
         update-types:
           - 'minor'
           - 'patch'
+    # Never auto-merge — always require manual review and CI
+    auto-merge: false
+    # Limit open PRs to avoid noise
+    open-pull-requests-limit: 5
+    # Label all Dependabot PRs for easy filtering
+    labels:
+      - 'dependencies'
+    commit-message:
+      prefix: 'chore(deps)'
+    # Ignore major version bumps for these noisy packages
     ignore:
-      # Major version bumps require manual review
-      - dependency-name: '*'
+      - dependency-name: '@types/*'
         update-types: ['version-update:semver-major']
 
-  # GitHub Actions
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
       interval: 'weekly'
       day: 'monday'
       time: '09:00'
+      timezone: 'America/New_York'
+    groups:
+      actions:
+        patterns:
+          - '*'
+    auto-merge: false
+    open-pull-requests-limit: 3
+    labels:
+      - 'dependencies'
+    commit-message:
+      prefix: 'chore(deps)'
